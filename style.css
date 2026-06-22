@@ -198,6 +198,30 @@ body {
   background: var(--color-accent-3);
 }
 
+.module-card {
+  background: var(--color-glass-bg);
+  border: 2px solid;
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.module-card:hover {
+  transform: translateY(-0.25rem);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+}
+
+.slide[data-slide="3"] .module-card:nth-child(1) {
+  border-color: #60a5fa;
+}
+.slide[data-slide="3"] .module-card:nth-child(2) {
+  border-color: #3b82f6;
+}
+.slide[data-slide="3"] .module-card:nth-child(3) {
+  border-color: #1d4ed8;
+}
+
 .slide[data-slide="4"] .blob:nth-child(1) {
   background: var(--color-accent-1);
 }
