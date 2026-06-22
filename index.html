@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="slides-format" content="viewport" />
+  <title>Drug delivery, microscopia a fluorescenza e spettroscopia Raman</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./style-tailwind.css">
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+  <div class="mouse-spotlight"></div>
+  <div class="deck">
+    <!-- SLIDE 1: TITOLO -->
+    <div class="slide slide-1 active" data-slide="1">
+      <div class="gradient-mesh">
+        <div class="blob" style="width:520px;height:520px;top:-120px;right:-80px;"></div>
+        <div class="blob" style="width:420px;height:420px;bottom:-140px;left:-100px;">
+        </div>
+        <div class="blob" style="width:260px;height:260px;top:45%;left:12%;"></div>
+      </div>
+      <canvas class="particle-canvas" style="position:absolute;inset:0;z-index:1;"></canvas>
+      <div class="content text-center">
+        <div
+          class="inline-flex items-center gap-3 px-4 py-1 rounded-full bg-sky-100 border border-sky-300 text-sky-800 text-xs tracking-[0.25em] uppercase mb-6 reveal">
+          <span>POT / FSL — A.S. 2025/2026</span>
+        </div>
+        <h1
+          class="font-display text-[clamp(2.6rem,4.8vw,3.9rem)] font-black bg-linear-to-br from-accent-1 via-accent-2 to-accent-1 bg-clip-text tracking-tight leading-tight mb-6 reveal">
+          Drug delivery, microscopia a fluorescenza<br class="hidden sm:block" />e spettroscopia Raman
+        </h1>
+        <p class="text-[clamp(.95rem,1.45vw,1.2rem)] text-text-secondary max-w-3xl mx-auto text-balance mb-5 reveal">
+          Abstract del percorso POT <span class="italic">"La luce: una potente tecnologia per la biomedicina e la salute
+            dell’uomo"</span> svolto
+          presso l’Università degli Studi del Sannio.
+        </p>
+        <p class="text-sm text-text-muted reveal">
+          Alunno: <span class="font-semibold text-text-secondary">Micco Mario</span> · Classe <span
+            class="font-semibold text-text-secondary">IV Q</span>
+        </p>
+        <div class="mt-9 grid grid-cols-3 gap-2 max-w-3xl mx-auto reveal">
+          <div class="aspect-video rounded-xl overflow-hidden">
+            <img src="imgs/1.jpg" alt="" class="w-full h-full object-cover" />
+          </div>
+          <div class="aspect-video rounded-xl overflow-hidden">
+            <img src="imgs/3.jpg" alt="" class="w-full h-full object-cover" />
+          </div>
+          <div class="aspect-video rounded-xl overflow-hidden">
+            <img src="imgs/4.jpg" alt="Fibra ottica con strato di microgel" class="w-full h-full object-cover" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 2: INTRODUZIONE -->
+    <div class="slide slide-2" data-slide="2">
+      <div class="gradient-mesh">
+        <div class="blob" style="width:420px;height:420px;top:-120px;right:-80px;"></div>
+        <div class="blob" style="width:320px;height:320px;bottom:-120px;left:-60px;">
+        </div>
+      </div>
+      <canvas class="particle-canvas" style="position:absolute;inset:0;z-index:1;"></canvas>
+      <div class="content">
+        <h2 class="font-display text-[clamp(2rem,4vw,2.6rem)] font-semibold text-accent-1 mb-4 reveal">Il percorso POT
+        </h2>
+        <p class="text-text-secondary text-sm text-[clamp(.95rem,1.1vw,1.1rem)] max-w-3xl mb-6 reveal">
+          Il presente lavoro nasce dalla partecipazione al percorso POT
+          <span class="italic">"La luce: una potente tecnologia per la biomedicina e la salute dell’uomo"</span>,
+          dedicato allo studio del ruolo della luce nelle moderne biotecnologie.
+        </p>
+        <div class="grid grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)] gap-8 items-start">
+          <div class="space-y-3 text-sm text-text-secondary">
+            <div class="reveal">
+              <p class="text-text-muted text-xs font-semibold tracking-[0.22em] uppercase mb-1">Luogo</p>
+              <p class="text-[0.98rem]">Università degli Studi del Sannio — Dipartimento di Ingegneria.</p>
+            </div>
+            <div class="reveal">
+              <p class="text-text-muted text-xs font-semibold tracking-[0.22em] uppercase mb-1">Periodo</p>
+              <p class="text-[0.98rem]">A.S. 2025/2026 — Moduli svolti tra 29/01 e 05/03 2026</p>
+            </div>
+            <div class="reveal">
+              <p class="text-text-muted text-xs font-semibold tracking-[0.22em] uppercase mb-1">Classi partecipanti</p>
+              <p class="text-[0.98rem]">Classe IV Q (quadriennale indirizzo scienze applicate) e Classe V F (indirizzo
+                scientifico opzione informatico).</p>
+            </div>
+          </div>
+          <div class="reveal">
+            <div class="aspect-video rounded-xl overflow-hidden">
+              <img src="imgs/fotoaerea.png" alt="Università degli Studi del Sannio - vista da Google Maps"
+                class="w-full h-full object-cover" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 3: STRUTTURA MODULI -->
+    <div class="slide slide-3" data-slide="3">
+      <div class="gradient-mesh">
+        <div class="blob" style="width:420px;height:420px;top:-140px;right:-60px;"></div>
+        <div class="blob" style="width:280px;height:280px;bottom:-120px;left:-40px;">
+        </div>
+      </div>
+      <canvas class="particle-canvas" style="position:absolute;inset:0;z-index:1;"></canvas>
+      <div class="content">
+        <h2 class="font-display text-[clamp(2rem,4vw,2.6rem)] font-semibold mb-5 reveal">Struttura del percorso</h2>
+        <p class="text-text-secondary text-sm max-w-3xl mb-6 reveal">
+          Il POT si è articolato in tre moduli principali, che collegano la somministrazione del farmaco
+          con due diversi approcci di analisi dei dati sperimentali.
+        </p>
+        <div class="grid grid-cols-3 gap-5">
+          <div
+            class="bg-glass-bg border border-glass-border rounded-xl p-5 shadow-lg hover:-translate-y-1 hover:shadow-xl transition reveal">
+            <p class="text-xs uppercase tracking-[0.25em] text-text-muted mb-2">Modulo 1</p>
+            <h3 class="font-display text-xl font-bold mb-1">Drug delivery</h3>
+            <p class="text-sm text-text-secondary">Realizzazione di un sistema di somministrazione localizzata e
+              controllata
+              del farmaco tramite fibra ottica.</p>
+          </div>
+          <div
+            class="bg-glass-bg border border-glass-border rounded-xl p-5 shadow-lg hover:-translate-y-1 hover:shadow-xl transition reveal">
+            <p class="text-xs uppercase tracking-[0.25em] text-text-muted mb-2">Modulo 2</p>
+            <h3 class="font-display text-xl font-bold mb-1">Microscopia a fluorescenza</h3>
+            <p class="text-sm text-text-secondary">Analisi morfologica del microgel e monitoraggio dell’interazione tra
+              farmaco e cellule tumorali grazie alla fluorescenza.</p>
+          </div>
+          <div
+            class="bg-glass-bg border border-glass-border rounded-xl p-5 shadow-lg hover:-translate-y-1 hover:shadow-xl transition reveal">
+            <p class="text-xs uppercase tracking-[0.25em] text-text-muted mb-2">Modulo 3</p>
+            <h3 class="font-display text-xl font-bold mb-1">Spettroscopia Raman</h3>
+            <p class="text-sm text-text-secondary">Analisi biochimica non invasiva del campione attraverso lo spettro
+              Raman
+              e le sue amplificazioni (SERS/TERS).</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 4: MODULO 1 PRINCIPIO -->
+    <div class="slide slide-4" data-slide="4">
+      <div class="gradient-mesh">
+        <div class="blob" style="width:420px;height:420px;top:-120px;right:-80px;"></div>
+        <div class="blob" style="width:260px;height:260px;bottom:-80px;left:-40px;"></div>
+      </div>
+      <canvas class="particle-canvas" style="position:absolute;inset:0;z-index:1;"></canvas>
+      <div class="content">
+        <h2 class="font-display text-[clamp(2rem,4vw,2.5rem)] font-semibold mb-4 reveal">Modulo 1 — Drug delivery
+          localizzato</h2>
+        <p class="text-text-secondary text-sm max-w-3xl mb-5 reveal">
+          Il drug delivery localizzato mira a rilasciare il farmaco terapeutico solo nell’area di interesse,
+          controllandone tempi e dosi, e riducendo gli effetti collaterali delle terapie tradizionali.
+        </p>
+        <div class="grid grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)] gap-7 items-start">
+          <div class="space-y-3 text-sm text-text-secondary">
+            <ul class="list-disc pl-5 space-y-2">
+              <li class="reveal">Il dispositivo è una <span class="font-semibold">fibra ottica</span> formata da due
+                sezioni con <span class="font-semibold">core offset</span>, rivestite da uno strato d’oro e da una
+                matrice di microgel.</li>
+              <li class="reveal">Il microgel ospita il farmaco (doxorubicina) e consente un rilascio controllato in
+                risposta alla luce.</li>
+              <li class="reveal">La luce viaggia nel core per <span class="font-semibold">riflessione interna
+                  totale</span>, finché in prossimità della giunzione la luce trasferisce calore al microgel per <span
+                  class="font-semibold">SPR ed effetto Joule</span>.</li>
+            </ul>
+          </div>
+          <div class="reveal">
+            <div class="rounded-xl overflow-hidden inline-block">
+              <img src="imgs/fibra.png" alt="Schema del dispositivo di drug delivery basato su fibra ottica"
+                class="block w-full max-w-full h-auto" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 6: MODULO 2 MICROSCOPIA -->
+    <div class="slide slide-5" data-slide="5">
+      <div class="gradient-mesh">
+        <div class="blob" style="width:420px;height:420px;top:-130px;right:-80px;"></div>
+        <div class="blob" style="width:260px;height:260px;bottom:-80px;left:-40px;"></div>
+      </div>
+      <canvas class="particle-canvas" style="position:absolute;inset:0;z-index:1;"></canvas>
+      <div class="content">
+        <h2 class="font-display text-[clamp(2rem,4vw,2.5rem)] font-semibold mb-4 reveal">Modulo 2 — Microscopia a
+          fluorescenza</h2>
+        <div class="grid grid-cols-[minmax(0,1.2fr)_minmax(0,1.1fr)] gap-7 items-start text-sm text-text-secondary">
+          <div class="space-y-3">
+            <p class="mb-2 reveal">
+              Tecnica ottica poco invasiva per osservare cellule e effetto del farmaco.
+            </p>
+            <ul class="list-disc pl-5 space-y-2">
+              <li class="reveal">Analisi dello strato di microgel depositato sulla fibra.</li>
+              <li class="reveal">Monitoraggio dell’interazione tra doxorubicina e cellule tumorali.
+              </li>
+              <li class="reveal">La fluorescenza nasce quando gli elettroni eccitati tornano allo stato fondamentale.
+              </li>
+            </ul>
+          </div>
+          <div class="space-y-3">
+            <h3 class="font-semibold text-base mb-1 reveal">Fluorocromi utilizzati</h3>
+            <ul class="list-disc pl-5 space-y-2">
+              <li class="reveal"><span class="font-semibold">DAPI</span>: si lega al DNA e colora il nucleo in blu.</li>
+              <li class="reveal"><span class="font-semibold">Falloidina</span>: evidenzia i filamenti di actina del
+                citoscheletro in verde.</li>
+              <li class="reveal"><span class="font-semibold">MitoTracker</span>: marca i mitocondri con emissione rossa.
+              </li>
+            </ul>
+            <div class="mt-3 reveal">
+              <div class="rounded-xl overflow-hidden inline-block">
+                <img src="imgs/1.jpg" alt="Cellule e farmaco viste a fluorescenza"
+                  class="block w-full max-w-full h-auto" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 7: MODULO 3 RAMAN -->
+    <div class="slide slide-6" data-slide="6">
+      <div class="gradient-mesh">
+        <div class="blob" style="width:420px;height:420px;top:-130px;right:-80px;"></div>
+        <div class="blob" style="width:260px;height:260px;bottom:-80px;left:-40px;"></div>
+      </div>
+      <canvas class="particle-canvas" style="position:absolute;inset:0;z-index:1;"></canvas>
+      <div class="content">
+        <h2 class="font-display text-[clamp(2rem,4vw,2.5rem)] font-semibold mb-4 reveal">Modulo 3 — Spettroscopia Raman
+        </h2>
+        <p class="text-text-secondary text-sm max-w-3xl mb-5 reveal">
+          Tecnica spettroscopica non invasiva per identificare le molecole nel campione.
+        </p>
+        <div class="grid grid-cols-2 gap-7 items-start text-sm text-text-secondary">
+          <div class="space-y-2">
+            <h3 class="font-semibold text-base mb-1 reveal">Effetto Raman</h3>
+            <ul class="list-disc pl-5 space-y-2">
+              <li class="reveal">La maggior parte della luce è diffusa elasticamente (Rayleigh).
+
+              </li>
+              <li class="reveal">Una piccola frazione è diffusa con energia diversa: la differenza di energia è il <span
+                  class="font-semibold">
+                  Raman
+                  shift
+                </span>.</li>
+              <li class="reveal">Lo spettro Raman mostra picchi che identificano le specie chimiche.
+
+              </li>
+            </ul>
+          </div>
+          <div class="space-y-3">
+            <h3 class="font-semibold text-base mb-1 reveal">SERS e TERS</h3>
+            <ul class="list-disc pl-5 space-y-2">
+              <li class="reveal"><span class="font-semibold">SERS</span>: nanoparticelle metalliche amplificano
+                fortemente il segnale Raman.</li>
+              <li class="reveal"><span class="font-semibold">TERS</span>: punta nanometrica metallizzata per risoluzione
+                spaziale molto elevata.</li>
+            </ul>
+            <div class="mt-2 reveal">
+              <div class="rounded-xl overflow-hidden inline-block">
+                <img src="imgs/raman.jpg"
+                  alt="Grafico ottenuto da un'analisi spettroscopica Raman di un campione biologico"
+                  class="block w-full max-w-full h-auto" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 8: HARD SKILL -->
+    <div class="slide slide-7" data-slide="7">
+      <div class="gradient-mesh">
+        <div class="blob" style="width:420px;height:420px;top:-130px;right:-80px;"></div>
+        <div class="blob" style="width:260px;height:260px;bottom:-80px;left:-40px;"></div>
+      </div>
+      <canvas class="particle-canvas" style="position:absolute;inset:0;z-index:1;"></canvas>
+      <div class="content">
+        <h2 class="font-display text-[clamp(2rem,4vw,2.4rem)] font-semibold mb-4 reveal">Competenze scientifiche
+          sviluppate (HARD SKILLS)</h2>
+        <div class="grid grid-cols-2 gap-6 text-sm text-text-secondary">
+          <div class="space-y-2">
+            <ul class="list-disc pl-5 space-y-2">
+              <li class="reveal">Comprensione dei principi di <span class="font-semibold">riflessione interna
+                  totale</span> e propagazione della luce in fibra ottica.</li>
+              <li class="reveal">Nozioni su <span class="font-semibold">risonanza plasmonica di superficie (SPR)</span>.
+              </li>
+              <li class="reveal">Conoscenza qualitativa del <span class="font-semibold">reticolo di Bragg</span> e della
+                misura di temperatura tramite spostamento di lunghezza d’onda.</li>
+              <li class="reveal">Prime esperienze di impostazione della fibra ottica e dei diversi tipi di giunzioni.
+              </li>
+            </ul>
+          </div>
+          <div class="space-y-2">
+            <ul class="list-disc pl-5 space-y-2">
+              <li class="reveal">Elementi di <span class="font-semibold">microscopia a fluorescenza</span>: fluorocromi,
+                staining, risoluzione e tipi di microscopio.</li>
+              <li class="reveal">Elementi di <span class="font-semibold">spettroscopia Raman</span> e tecniche avanzate
+                (SERS, TERS) per l’analisi di materiali biologici.</li>
+              <li class="reveal">Prime esperienze di impostazione e lettura di parametri di acquisizione dati
+                (integrazione, accumulazione, dark scan).</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 9: SOFT SKILL -->
+    <div class="slide slide-8" data-slide="8">
+      <div class="gradient-mesh">
+        <div class="blob" style="width:420px;height:420px;top:-130px;right:-80px;"></div>
+        <div class="blob" style="width:260px;height:260px;bottom:-80px;left:-40px;"></div>
+      </div>
+      <canvas class="particle-canvas" style="position:absolute;inset:0;z-index:1;"></canvas>
+      <div class="content">
+        <h2 class="font-display text-[clamp(2rem,4vw,2.4rem)] font-semibold mb-4 reveal">Competenze trasversali (SOFT
+          SKILLS)</h2>
+        <div class="grid grid-cols-2 gap-6 text-sm text-text-secondary">
+          <div class="space-y-2">
+            <ul class="list-disc pl-5 space-y-2">
+              <li class="reveal">Lavoro in gruppo in laboratorio e rispetto delle procedure sperimentali.
+              </li>
+              <li class="reveal">Capacità di <span class="font-semibold">comunicare risultati scientifici</span> in modo
+                chiaro e ordinato.</li>
+              <li class="reveal">Adattamento all’ambiente universitario e collaborazione con docenti, tutor, ricercatori
+                e dottorandi.</li>
+            </ul>
+          </div>
+          <div class="space-y-2">
+            <ul class="list-disc pl-5 space-y-2">
+
+              <li class="reveal">Sviluppo del <span class="font-semibold">pensiero critico</span> nell’interpretare dati
+                sperimentali e nel riconoscere i limiti delle tecniche usate.</li>
+              <li class="reveal">Maggiore autonomia nello studio e nella ricerca di collegamenti tra fisica, biologia e
+                medicina.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 10: INTERESSE PER LA FISICA
+    <div class="slide slide-9" data-slide="9">
+      <div class="gradient-mesh">
+        <div class="blob"
+          style="width:460px;height:460px;top:-130px;right:-80px;"></div>
+        <div class="blob"
+          style="width:260px;height:260px;bottom:-80px;left:-40px;"></div>
+      </div>
+      <div class="content">
+        <h2 class="font-display text-[clamp(2rem,4vw,2.5rem)] font-semibold mb-5 reveal">Il mio interesse per la fisica
+        </h2>
+        <div class="max-w-3xl text-sm text-text-secondary space-y-3">
+          <p class="reveal">
+            Questo percorso mi ha fatto vedere come la fisica non sia solo teoria, ma uno strumento concreto
+            per progettare dispositivi e tecniche che possono migliorare la salute delle persone.
+          </p>
+          <p class="reveal">
+            Lavorare con la luce, le fibre ottiche, la microscopia e la spettroscopia mi ha permesso di
+            collegare concetti studiati in classe con applicazioni reali in ambito biomedico.
+          </p>
+          <p class="reveal">
+            L’esperienza in laboratorio universitario ha rafforzato il mio interesse verso la <span
+              class="font-semibold">Facoltà di Fisica</span>,
+            dove vorrei continuare ad approfondire questi temi unendo teoria, modellizzazione e sperimentazione.
+          </p>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- SLIDE 11: CONCLUSIONI -->
+    <div class="slide slide-9" data-slide="9">
+      <div class="gradient-mesh">
+        <div class="blob" style="width:520px;height:520px;top:-140px;right:-80px;"></div>
+        <div class="blob" style="width:360px;height:360px;bottom:-140px;left:-80px;">
+        </div>
+        <div class="blob" style="width:220px;height:220px;top:45%;left:18%;"></div>
+      </div>
+      <canvas class="particle-canvas" style="position:absolute;inset:0;z-index:1;"></canvas>
+      <div class="content text-center">
+        <h2 class="font-display text-[clamp(2.3rem,4.4vw,3.2rem)] font-semibold mb-4 reveal">
+          La luce come strumento di cura
+        </h2>
+        <p class="text-[clamp(.95rem,1.2vw,1.15rem)] text-text-secondary max-w-3xl mx-auto mb-5 reveal">
+          Il percorso POT mi ha mostrato come la luce possa essere utilizzata per <span
+            class="font-semibold">somministrare farmaci</span>,
+          <span class="font-semibold">osservare le cellule</span> e <span class="font-semibold">analizzare i processi
+            biochimici</span>,
+          integrando fisica, biologia e medicina in un’unica esperienza formativa. La luce diventa un alleato per la
+          salute dell'uomo.
+        </p>
+        <p class="text-base font-semibold text-accent-1 reveal">Grazie per l’attenzione</p>
+        <p class="text-xs text-text-muted mt-1 reveal">Micco Mario · Classe IV Q · A.S. 2025/2026</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="nav-controls">
+    <button class="nav-btn" onclick="changeSlide(-1)">&#8593;</button>
+    <div class="slide-dots" id="dots"></div>
+    <button class="nav-btn" onclick="changeSlide(1)">&#8595;</button>
+    <span class="slide-counter" id="counter">1 / 9</span>
+  </div>
+
+  <!-- JAVASCRIPT -->
+  <script src="./app.js"></script>
+</body>
+
+</html>
